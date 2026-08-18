@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { ButtonLink } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
+import { BlockMark } from "@/components/brand/block-mark";
 import { SOCIAL } from "@/lib/links";
 
 export function Hero() {
@@ -47,16 +47,8 @@ export function Hero() {
         </div>
 
         <Reveal delay={0.1} className="relative mx-auto w-full max-w-sm lg:max-w-none">
-          <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg border border-border/70 shadow-[0_0_80px_-20px_rgba(245,166,35,0.35)]">
-            <Image
-              src="/images/fourth.jpeg"
-              alt="Blocky, the block-headed mascot, in a gold tuxedo with a Bitcoin chain"
-              fill
-              priority
-              sizes="(min-width: 1024px) 40vw, 90vw"
-              className="object-cover"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/70 via-transparent to-transparent" />
+          <div className="relative flex aspect-[3/4] w-full items-center justify-center overflow-hidden rounded-lg border border-border/70 bg-surface/40">
+            <BlockMark className="h-[85%] w-[85%]" />
           </div>
         </Reveal>
       </div>

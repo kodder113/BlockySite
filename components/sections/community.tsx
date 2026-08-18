@@ -1,5 +1,4 @@
 import { Send, ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/motion/reveal";
 import { SOCIAL } from "@/lib/links";
@@ -65,53 +64,39 @@ export function Community() {
   return (
     <section id="community" className="border-b border-border/60 bg-bg-alt">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
-        <div className="grid gap-14 lg:grid-cols-[1fr_0.6fr] lg:items-center">
-          <div>
-            <Reveal>
-              <SectionHeading
-                eyebrow="Join Us"
-                title="Blocky gets better when more people show up."
-                description="Telegram, X, Instagram, TikTok — this isn't just a project, it's a running conversation. Come talk your book, share your bags, and help shape what Blocky builds next."
-              />
+        <Reveal>
+          <SectionHeading
+            eyebrow="Join Us"
+            title="Blocky gets better when more people show up."
+            description="Telegram, X, Instagram, TikTok — this isn't just a project, it's a running conversation. Come help shape what Blocky builds next."
+          />
+        </Reveal>
+
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {CHANNELS.map((c, i) => (
+            <Reveal key={c.name} delay={0.05 * i}>
+              <a
+                href={c.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glow-border group flex h-full flex-col justify-between gap-6 rounded-md border bg-surface p-5"
+              >
+                <div className="flex items-center justify-between">
+                  <c.icon size={20} className="text-primary" />
+                  <ArrowUpRight
+                    size={16}
+                    className="text-text-faint transition-colors group-hover:text-primary"
+                  />
+                </div>
+                <div>
+                  <p className="font-display text-sm font-semibold text-text">
+                    {c.name}
+                  </p>
+                  <p className="text-xs text-text-faint">{c.stat}</p>
+                </div>
+              </a>
             </Reveal>
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {CHANNELS.map((c, i) => (
-                <Reveal key={c.name} delay={0.05 * i}>
-                  <a
-                    href={c.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="glow-border group flex items-center justify-between rounded-md border bg-surface p-5"
-                  >
-                    <div className="flex items-center gap-3">
-                      <c.icon size={20} className="text-primary" />
-                      <div>
-                        <p className="font-display text-sm font-semibold text-text">
-                          {c.name}
-                        </p>
-                        <p className="text-xs text-text-faint">{c.stat}</p>
-                      </div>
-                    </div>
-                    <ArrowUpRight
-                      size={18}
-                      className="text-text-faint transition-colors group-hover:text-primary"
-                    />
-                  </a>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-
-          <Reveal delay={0.1} className="relative mx-auto aspect-square w-full max-w-sm overflow-hidden rounded-lg border border-border">
-            <Image
-              src="/images/content.jpeg"
-              alt="Blocky mascot at a trading desk with crypto charts and a yellow supercar"
-              fill
-              sizes="(min-width: 1024px) 30vw, 80vw"
-              className="object-cover"
-            />
-          </Reveal>
+          ))}
         </div>
       </div>
     </section>

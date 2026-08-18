@@ -80,17 +80,28 @@ export function Ecosystem() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="mt-6 text-sm text-text-faint">
-            Blocky also has a collectible NFT set on Ethereum.{" "}
-            <a
-              href={NFT.opensea}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline"
-            >
-              View the collection on OpenSea ↗
-            </a>
-          </p>
+          <a
+            href={NFT.opensea}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glow-border group mt-6 flex items-center justify-between gap-4 rounded-md border bg-surface p-5"
+          >
+            <div>
+              <p className="font-display text-sm font-semibold text-text">
+                NFT Collection
+              </p>
+              <p className="mt-1 text-sm text-text-muted">
+                A separate Blocky collectible set, live on Ethereum.
+              </p>
+            </div>
+            <span className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-primary">
+              View on OpenSea
+              <ArrowUpRight
+                size={16}
+                className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </span>
+          </a>
         </Reveal>
       </div>
     </section>

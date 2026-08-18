@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
@@ -23,10 +24,22 @@ export function Nav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link
           href="#top"
-          className="font-display text-xl font-bold tracking-tight text-text"
+          className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
-          BLOCKY
+          <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-border">
+            <Image
+              src="/images/fourth.jpeg"
+              alt=""
+              fill
+              sizes="32px"
+              className="object-cover"
+              style={{ objectPosition: "50% 18%" }}
+            />
+          </span>
+          <span className="font-display text-xl font-bold tracking-tight text-text">
+            BLOCKY
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

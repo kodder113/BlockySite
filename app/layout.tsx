@@ -33,7 +33,6 @@ export const metadata: Metadata = {
       "Blocky is a Web3-native brand growing beyond $BLOCKY into community experiences, products, and a larger ecosystem.",
     url: siteUrl,
     siteName: "Blocky",
-    images: ["/images/fourth.jpeg"],
     type: "website",
   },
   twitter: {
@@ -41,7 +40,6 @@ export const metadata: Metadata = {
     title: "Blocky — A Web3 Brand Built on Swagger",
     description:
       "Blocky is a Web3-native brand growing beyond $BLOCKY into community experiences, products, and a larger ecosystem.",
-    images: ["/images/fourth.jpeg"],
   },
 };
 
