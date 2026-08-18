@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0906;
+  --bg-alt: #120e09;
+  --surface: #1c160e;
+  --border: #332a1b;
+  --border-glow: rgba(245, 166, 35, 0.35);
+
+  --primary: #f5a623;
+  --primary-light: #ffc94d;
+  --primary-deep: #c97f12;
+  --accent-red: #e8433a;
+
+  --text: #ffffff;
+  --text-muted: #b8ae9c;
+  --text-faint: #7a7161;
+
+  --success: #34d399;
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1.125rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 9999px;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-deep: var(--primary-deep);
+  --color-accent-red: var(--accent-red);
+
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+
+  --color-success: var(--success);
+
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-pill: var(--radius-pill);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--primary);
+  color: #000;
+}
+
+.glow-border {
+  border-color: var(--border);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.glow-border:hover,
+.glow-border:focus-visible {
+  border-color: var(--border-glow);
+  box-shadow: 0 0 0 1px var(--border-glow), 0 0 32px -8px rgba(245, 166, 35, 0.45);
+}
+
+.text-glow {
+  text-shadow: 0 0 40px rgba(245, 166, 35, 0.35);
+}
+
+.grain-bg {
+  background-image: radial-gradient(circle at 20% 10%, rgba(245, 166, 35, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(232, 67, 58, 0.06), transparent 40%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
