@@ -40,8 +40,12 @@ export function Token() {
           <SectionHeading
             eyebrow="$BLOCKY"
             title="The token that started it all."
-            description="$BLOCKY runs on Solana. It's the foundation the rest of the Blocky ecosystem is built on — not a promise of returns. Do your own research before buying anything."
+            description="Before the products, there was $BLOCKY. Launched on Solana, the token brought together the first Blocky community and gave the brand its start. It remains part of the ecosystem today."
           />
+          <p className="mt-5 max-w-2xl text-sm text-text-faint">
+            Crypto assets involve risk. $BLOCKY carries no guarantee of value
+            or returns. Do your own research.
+          </p>
         </Reveal>
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1fr] lg:gap-16">

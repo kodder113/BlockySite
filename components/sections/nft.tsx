@@ -11,10 +11,14 @@ export function Nft() {
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-16">
           <Reveal>
             <SectionHeading
-              eyebrow="NFT Collection"
-              title="A collectible set, separate from the token."
-              description={`Blocky also maintains a standalone NFT collection on ${NFT.chain} — a distinct collectible line with its own listing, unrelated to $BLOCKY's token economics.`}
+              eyebrow="Blocky Collectibles"
+              title="Part of the Blocky story."
+              description={`Blocky's original NFT collection lives on ${NFT.chain} — a collectible extension of the character and community that helped shape the brand early on.`}
             />
+            <p className="mt-4 text-sm text-text-faint">
+              The collection is separate from $BLOCKY and has its own listing
+              on OpenSea.
+            </p>
             <a
               href={NFT.opensea}
               target="_blank"

@@ -3,20 +3,20 @@ import { Reveal } from "@/components/motion/reveal";
 
 const TRAITS = [
   {
-    title: "Community-driven",
-    body: "Momentum here comes from people showing up and taking part — on Telegram, on X, in the day-to-day conversation — not from a marketing budget.",
+    title: "Community-powered",
+    body: "Blocky grew because people showed up, stayed involved, shared it, and gave the brand a life beyond the token.",
   },
   {
     title: "Built in public",
-    body: "Blocky took shape in the open, shaped early by the people who found it first and stuck around.",
+    body: "We're building Blocky where people can see it — launching ideas, testing products, learning, and evolving as we go.",
   },
   {
-    title: "Web3-native",
-    body: "Born on-chain and built for people already comfortable in wallets and DEX charts — not slide decks.",
+    title: "Internet-born",
+    body: "Blocky came from crypto and internet culture. That origin is part of the brand, but it doesn't define where the brand can go.",
   },
   {
-    title: "Still building",
-    body: "$BLOCKY was the first move, not the last one. Additional products are already in motion.",
+    title: "Just getting started",
+    body: "$BLOCKY started the story. BlockyMarket is the first major step beyond it — and we're not stopping there.",
   },
 ];
 
@@ -26,9 +26,9 @@ export function WhatIsBlocky() {
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         <Reveal>
           <SectionHeading
-            eyebrow="What is Blocky?"
-            title="A brand shaped by its community, not a boardroom."
-            description="Blocky is a Web3-native brand: a token, sustained by a genuinely active community, and expanding over time into new products and experiences. There's no pitch deck behind it — just people who kept showing up."
+            eyebrow="The Idea"
+            title="A brand built by its community, not a boardroom."
+            description="Blocky is an internet-born brand shaped by the people around it. What began with $BLOCKY is evolving into something broader — products, competition, experiences, and a community that gets to be there while it's built."
           />
         </Reveal>
 

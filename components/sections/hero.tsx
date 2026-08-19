@@ -29,17 +29,17 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-xl text-lg text-text-muted sm:text-xl">
-              Blocky began as a Web3 token with a distinct identity of its
-              own. It has since grown into a wider ecosystem — spanning the
-              token, an engaged community, and an expanding set of products
-              built around them.
+              Blocky started with a token and became something bigger — a
+              community, a recognizable identity, and now a growing lineup of
+              products and experiences. We&apos;re building the next chapter
+              one product at a time.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <ButtonLink href="#about">Explore Blocky</ButtonLink>
               <ButtonLink href="#token" variant="outline">
-                Get $BLOCKY
+                Explore $BLOCKY
               </ButtonLink>
               <ButtonLink href={SOCIAL.telegram.url} variant="ghost" external>
                 Join the Community →

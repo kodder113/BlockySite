@@ -66,9 +66,9 @@ export function Community() {
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28">
         <Reveal>
           <SectionHeading
-            eyebrow="Join Us"
-            title="Blocky gets better when more people show up."
-            description="Telegram, X, Instagram, TikTok — this is where the Blocky community actually lives. Less a broadcast channel, more an ongoing conversation."
+            eyebrow="The Community"
+            title="Blocky grows with the people around it."
+            description="The community was here before the products. Follow what we're building, join the conversation, compete, share ideas, or just watch what happens next."
           />
         </Reveal>
 

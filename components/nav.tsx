@@ -57,8 +57,8 @@ export function Nav() {
         <div className="hidden items-center gap-3 md:flex">
           <ButtonLink
             href="#ecosystem"
-            variant="ghost"
-            className="px-3 text-xs"
+            variant="outline"
+            className="px-4 py-2 text-sm"
           >
             BlockyMarket ↗
           </ButtonLink>

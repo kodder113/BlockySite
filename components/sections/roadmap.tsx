@@ -21,9 +21,9 @@ const PHASES: {
     status: "live",
     label: "Live",
     items: [
-      "$BLOCKY token launch & contract audit",
-      "CoinGecko, DexScreener & CoinMarketCap listings",
-      "Brand and visual identity launch",
+      "$BLOCKY launch and contract audit",
+      "Major token tracking listings",
+      "Blocky identity and visual brand established",
       "New marketing website",
       "Telegram and X community formed",
     ],
@@ -34,9 +34,10 @@ const PHASES: {
     status: "beta",
     label: "Beta",
     items: [
-      "Crypto price & outcome predictions",
-      "Head-to-head challenges",
-      "Blocky Points and basic competition mechanics",
+      "Market and outcome predictions",
+      "Blocky Points",
+      "Head-to-head competition",
+      "Core prediction experience",
     ],
   },
   {
@@ -47,18 +48,20 @@ const PHASES: {
     items: [
       "Global and weekly rankings",
       "Prediction streaks and achievements",
-      "Expanded challenge categories",
+      "Expanded prediction categories",
+      "Seasonal competition",
     ],
   },
   {
     n: "04",
-    title: "Social & Invites",
+    title: "Social & Challenges",
     status: "future",
     label: "Future",
     items: [
-      "Invite links and shareable challenges",
+      "Invite links and shareable predictions",
       "Player-vs-player challenges",
       "Referral mechanics",
+      "Social competition",
     ],
   },
   {
@@ -67,20 +70,22 @@ const PHASES: {
     status: "future",
     label: "Future",
     items: [
-      "Private leagues with seasons",
-      "Daily & weekly challenge formats",
-      "Standings, badges, and season champions",
+      "Private leagues and seasons",
+      "Daily and weekly challenges",
+      "Standings, badges, and champions",
+      "Compete with friends or communities",
     ],
   },
   {
     n: "06",
-    title: "Blocky Wallet",
+    title: "Blocky Profile",
     status: "exploring",
     label: "Exploring",
     items: [
-      "One place for Blocky Points, identity & achievements",
-      "Competition history and ecosystem participation",
-      "Financial model not yet decided — no cash-out, no wagering",
+      "One identity across Blocky experiences",
+      "Points, achievements, and competition history",
+      "Rankings and ecosystem participation",
+      "A home for your activity across Blocky",
     ],
   },
   {
@@ -89,9 +94,10 @@ const PHASES: {
     status: "exploring",
     label: "Exploring",
     items: [
-      "An interactive AI presence for the Blocky community",
-      "A guiding voice inside BlockyMarket, explaining markets and mechanics as they happen",
-      "Scope and capabilities still being defined",
+      "An interactive Blocky presence across the ecosystem",
+      "Context and insights inside BlockyMarket",
+      "Help understanding markets, events, and competition",
+      "Capabilities still being explored",
     ],
   },
 ];
@@ -112,9 +118,13 @@ export function Roadmap() {
             align="center"
             eyebrow="Our Journey"
             title="Blocky's evolution, phase by phase."
-            description="From a single token to a growing ecosystem. Some of this is already live; the rest is the direction we're building toward."
+            description="The token was the starting point, not the finish line. We're building outward from it — first through BlockyMarket, then through competition, social experiences, and whatever proves worth building next."
             className="mx-auto"
           />
+          <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-text-faint">
+            Some of this is live. Some is planned. Some we&apos;re still
+            exploring. That&apos;s intentional.
+          </p>
         </Reveal>
 
         <div ref={ref} className="relative mt-16 pl-9 sm:pl-12">

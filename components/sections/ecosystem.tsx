@@ -8,22 +8,22 @@ const PILLARS = [
   {
     icon: Coins,
     title: "$BLOCKY",
-    body: "The token that started it all, and still the foundation the rest of the ecosystem is built on. Live on Solana.",
+    body: "Where the story started. The original Blocky token lives on Solana and remains part of the broader brand.",
   },
   {
     icon: Users,
     title: "Community",
-    body: "The people who talk about Blocky, build around it, and keep it moving — the actual source of the brand's momentum.",
+    body: "The people who gave Blocky momentum — following, participating, sharing ideas, and helping the brand grow.",
   },
   {
     icon: Sparkles,
     title: "Experiences",
-    body: "New ways to engage with Blocky that go beyond simply holding the token.",
+    body: "Ways to interact with Blocky rather than simply watch it — predictions, challenges, rankings, competition, and more.",
   },
   {
     icon: Boxes,
     title: "Products",
-    body: "Independent projects built under the Blocky name, shipped over time as the ecosystem matures.",
+    body: "Things we build under the Blocky name. BlockyMarket is the first major example, with more possibilities ahead.",
   },
 ];
 
@@ -34,8 +34,8 @@ export function Ecosystem() {
         <Reveal>
           <SectionHeading
             eyebrow="The Ecosystem"
-            title="One brand, growing in every direction."
-            description="Blocky isn't a static token page. It's a set of pieces working together — here's what makes up the ecosystem today, and where it's headed."
+            title="One brand. More ways to be part of it."
+            description="Blocky is growing beyond where it started. The token remains part of the story, while community, competition, products, and new experiences are shaping what comes next."
           />
         </Reveal>
 
@@ -58,15 +58,19 @@ export function Ecosystem() {
         <Reveal delay={0.15}>
           <div className="glow-border mt-6 rounded-md border bg-gradient-to-br from-surface to-bg-alt p-7">
             <div className="mx-auto max-w-2xl text-center">
-              <Badge status="beta">First Product · Preview</Badge>
+              <Badge status="beta">Blocky&apos;s First Product</Badge>
               <p className="mt-3 font-display text-xl font-semibold text-text">
                 BlockyMarket
               </p>
               <p className="mx-auto mt-1.5 max-w-xl text-sm text-text-muted">
-                One of the first products developed within the expanding
-                Blocky ecosystem — a competitive prediction experience that
-                tests your read on the market. Not yet open to the public;
-                preview only.
+                Prediction meets competition. BlockyMarket is a new way to
+                test your read on what happens next — starting with markets
+                and expanding over time into more events, challenges, and
+                outcomes. Make your call, compete, earn points, and see how
+                you rank.
+              </p>
+              <p className="mx-auto mt-3 max-w-xl text-xs text-text-faint">
+                The first major product built under the Blocky brand.
               </p>
             </div>
             <div className="mt-8">

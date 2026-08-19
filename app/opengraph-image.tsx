@@ -61,7 +61,7 @@ export default function OgImage() {
           BLOCKY
         </div>
         <div style={{ fontSize: 30, color: "#b8ae9c", marginTop: 18, display: "flex" }}>
-          A growing Web3 ecosystem
+          Community. Competition. What&apos;s next.
         </div>
       </div>
     ),
