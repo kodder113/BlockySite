@@ -6,6 +6,7 @@
 // real glyphs) -- all verified against src/App.jsx. Account balance/email
 // are placeholders, not the real user's data. Nothing here is clickable.
 
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 const COINS = [
@@ -45,7 +46,7 @@ function Frame({
 }) {
   return (
     <div
-      className="pointer-events-none w-full max-w-[300px] select-none overflow-hidden rounded-2xl border shadow-[0_30px_70px_-25px_rgba(0,0,0,0.7)]"
+      className="pointer-events-none flex h-full w-full max-w-[300px] flex-col select-none overflow-hidden rounded-2xl border shadow-[0_30px_70px_-25px_rgba(0,0,0,0.7)]"
       style={{ background: "#0a0e1a", borderColor: "#26304a", fontFamily: "var(--font-sans)" }}
       aria-hidden="true"
     >
@@ -87,26 +88,35 @@ function Frame({
         Live prices · Season 0 points · no cash value
       </p>
 
-      {/* hero photo band -- placeholder until the real blocky-hero photo is provided */}
-      <div
-        className="relative mt-3 flex flex-col items-center justify-end gap-1 px-4 pb-4 pt-10 text-center"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 90% at 50% 20%, rgba(255,122,24,0.22), transparent 70%), linear-gradient(180deg, #0d1220, #0a0e1a)",
-        }}
-      >
+      {/* hero photo band -- stand-in mascot shot until the real blocky-hero photo is provided */}
+      <div className="relative mt-3 flex h-32 flex-col items-center justify-end gap-1 overflow-hidden px-4 pb-4 text-center">
+        <Image
+          src="/images/fourth.jpeg"
+          alt=""
+          fill
+          sizes="300px"
+          className="object-cover"
+          style={{ objectPosition: "50% 20%" }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(10,14,26,0.35) 0%, rgba(10,14,26,0.55) 50%, #0a0e1a 100%)",
+          }}
+        />
         <p
-          className="text-base font-bold tracking-[0.15em]"
+          className="relative text-base font-bold tracking-[0.15em]"
           style={{ fontFamily: "var(--font-display)", color: "#ffb347" }}
         >
           BLOCKY
         </p>
-        <p className="text-xs" style={{ color: "#e8edf7" }}>
+        <p className="relative text-xs" style={{ color: "#e8edf7" }}>
           Pick a block. Ride it.
         </p>
       </div>
 
-      {children}
+      <div className="flex-1">{children}</div>
 
       {/* bottom nav */}
       <div className="mt-4 grid grid-cols-5" style={{ borderTop: "1px solid #1a2236" }}>
@@ -247,7 +257,7 @@ function AccountBody() {
 
 export function MarketPreview() {
   return (
-    <div className="flex flex-wrap items-start justify-center gap-5">
+    <div className="flex flex-wrap items-stretch justify-center gap-5">
       <Frame activeTab="Market">
         <MarketBody />
       </Frame>
