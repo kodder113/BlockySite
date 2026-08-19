@@ -56,20 +56,20 @@ export function Ecosystem() {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="glow-border mt-6 grid gap-8 rounded-md border bg-gradient-to-br from-surface to-bg-alt p-7 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
+          <div className="glow-border mt-6 rounded-md border bg-gradient-to-br from-surface to-bg-alt p-7">
+            <div className="mx-auto max-w-2xl text-center">
               <Badge status="beta">First Product · Preview</Badge>
               <p className="mt-3 font-display text-xl font-semibold text-text">
                 BlockyMarket
               </p>
-              <p className="mt-1.5 max-w-xl text-sm text-text-muted">
+              <p className="mx-auto mt-1.5 max-w-xl text-sm text-text-muted">
                 One of the first products being developed within the
                 expanding Blocky ecosystem — a competitive prediction
                 experience where you test your instincts against the market.
                 Not yet open to the public — preview only.
               </p>
             </div>
-            <div className="mx-auto w-full lg:mx-0">
+            <div className="mt-8">
               <MarketPreview />
             </div>
           </div>
