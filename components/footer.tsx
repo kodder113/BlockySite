@@ -80,7 +80,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-2 border-t border-border/60 pt-6 text-xs text-text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Blocky. All rights reserved.</p>
-          <p>$BLOCKY carries no guarantee of value or returns. Do your own research.</p>
+          <p>$BLOCKY is a digital asset and involves risk. Nothing on this site constitutes financial advice.</p>
         </div>
       </div>
     </footer>
