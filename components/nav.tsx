@@ -29,12 +29,12 @@ export function Nav() {
         >
           <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-border">
             <Image
-              src="/images/blocky-market-hero.jpg"
+              src="/images/fourth.jpeg"
               alt=""
               fill
               sizes="32px"
               className="object-cover"
-              style={{ objectPosition: "50% 32%" }}
+              style={{ objectPosition: "50% 18%" }}
             />
           </span>
           <span className="font-display text-xl font-bold tracking-tight text-text">
