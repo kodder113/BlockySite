@@ -1,15 +1,17 @@
 import { ButtonLink } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
-import { BlockMark } from "@/components/brand/block-mark";
+import { BlockCluster } from "@/components/brand/block-cluster";
 import { SOCIAL } from "@/lib/links";
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden border-b border-border/60 grain-bg"
+      className="relative overflow-hidden border-b border-border/60"
     >
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-14 sm:px-8 sm:pb-24 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8 lg:pb-28 lg:pt-24">
+      <div className="hero-bg pointer-events-none absolute inset-0" />
+
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-14 sm:px-8 sm:pb-24 sm:pt-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-28 lg:pt-24">
         <div>
           <Reveal>
             <p className="mb-5 font-mono text-xs font-medium uppercase tracking-[0.25em] text-primary">
@@ -45,10 +47,8 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.1} className="relative mx-auto w-full max-w-sm lg:max-w-none">
-          <div className="relative flex aspect-[3/4] w-full items-center justify-center overflow-hidden rounded-lg border border-border/70 bg-surface/40">
-            <BlockMark className="h-[85%] w-[85%]" />
-          </div>
+        <Reveal delay={0.1} className="relative mx-auto h-[360px] w-full max-w-md sm:h-[420px] lg:h-[460px] lg:max-w-none">
+          <BlockCluster className="h-full w-full" />
         </Reveal>
       </div>
     </section>

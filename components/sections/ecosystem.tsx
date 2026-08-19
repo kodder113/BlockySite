@@ -56,7 +56,7 @@ export function Ecosystem() {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="glow-border mt-6 grid gap-6 rounded-md border bg-gradient-to-br from-surface to-bg-alt p-7 sm:grid-cols-[1fr_auto] sm:items-center">
+          <div className="glow-border mt-6 grid gap-8 rounded-md border bg-gradient-to-br from-surface to-bg-alt p-7 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <Badge status="beta">First Product · Preview</Badge>
               <p className="mt-3 font-display text-xl font-semibold text-text">
@@ -69,7 +69,7 @@ export function Ecosystem() {
                 Not yet open to the public — preview only.
               </p>
             </div>
-            <div className="w-full max-w-[280px] sm:justify-self-end">
+            <div className="mx-auto w-full lg:mx-0">
               <MarketPreview />
             </div>
           </div>
