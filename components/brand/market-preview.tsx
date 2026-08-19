@@ -1,10 +1,11 @@
 // Static, non-interactive mockups of the BlockyMarket UI -- not live
 // screenshots, not links. Built from BlockyMarket's own brand tokens
-// (src/lib/tokens.js), its real coin list/glyphs, its real copy strings
-// ("Direction Market", "Live prices - Season 0 points - no cash value",
-// "Season 0 Balance", "Most wins", the real 5-tab bottom nav with its
-// real glyphs) -- all verified against src/App.jsx. Account balance/email
-// are placeholders, not the real user's data. Nothing here is clickable.
+// (src/lib/tokens.js), its real coin list/glyphs, its real copy strings,
+// its real 5-tab bottom nav, and its real official Blocky artwork
+// (extracted from the HERO_IMG data URI in src/App.jsx) -- all verified
+// against that source. Per App.jsx, nothing is laid over the hero band,
+// so the wordmark sits below it. Balance/leaderboard values are
+// placeholders, not real user data. Nothing here is clickable.
 
 import Image from "next/image";
 import type { ReactNode } from "react";
@@ -46,7 +47,7 @@ function Frame({
 }) {
   return (
     <div
-      className="pointer-events-none flex h-full w-full max-w-[300px] flex-col select-none overflow-hidden rounded-2xl border shadow-[0_30px_70px_-25px_rgba(0,0,0,0.7)]"
+      className="pointer-events-none flex h-full w-full select-none flex-col overflow-hidden rounded-2xl border shadow-[0_30px_70px_-25px_rgba(0,0,0,0.7)]"
       style={{ background: "#0a0e1a", borderColor: "#26304a", fontFamily: "var(--font-sans)" }}
       aria-hidden="true"
     >
@@ -88,30 +89,26 @@ function Frame({
         Live prices · Season 0 points · no cash value
       </p>
 
-      {/* hero photo band -- stand-in mascot shot until the real blocky-hero photo is provided */}
-      <div className="relative mt-3 flex h-32 flex-col items-center justify-end gap-1 overflow-hidden px-4 pb-4 text-center">
+      {/* hero band -- the real official Blocky artwork, nothing laid over it */}
+      <div className="relative mt-3 aspect-[3/2] w-full" style={{ background: "#07090f" }}>
         <Image
-          src="/images/fourth.jpeg"
+          src="/images/blocky-market-hero.jpg"
           alt=""
           fill
-          sizes="300px"
+          sizes="320px"
           className="object-cover"
-          style={{ objectPosition: "50% 20%" }}
+          style={{ objectPosition: "50% 30%" }}
         />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(10,14,26,0.35) 0%, rgba(10,14,26,0.55) 50%, #0a0e1a 100%)",
-          }}
-        />
+      </div>
+
+      <div className="px-4 pb-1 pt-3 text-center">
         <p
-          className="relative text-base font-bold tracking-[0.15em]"
-          style={{ fontFamily: "var(--font-display)", color: "#ffb347" }}
+          className="text-sm font-bold tracking-[0.2em]"
+          style={{ fontFamily: "var(--font-display)", color: "#ffd24a" }}
         >
           BLOCKY
         </p>
-        <p className="relative text-xs" style={{ color: "#e8edf7" }}>
+        <p className="mt-0.5 text-xs" style={{ color: "#e8edf7" }}>
           Pick a block. Ride it.
         </p>
       </div>
@@ -137,7 +134,7 @@ function Frame({
 
 function MarketBody() {
   return (
-    <div className="px-4 pt-4">
+    <div className="px-4 pt-3">
       <p className="text-[9px] font-semibold uppercase tracking-widest" style={{ color: "#8b97b3" }}>
         Market
       </p>
@@ -209,16 +206,22 @@ function MarketBody() {
 
 function AccountBody() {
   return (
-    <div className="px-4 pt-4">
+    <div className="px-4 pt-3">
       <div
-        className="flex flex-col items-center gap-2 rounded-lg px-3 py-4 text-center"
+        className="flex flex-col items-center gap-1.5 rounded-lg px-3 py-4 text-center"
         style={{ background: "#121829", border: "1px solid #26304a" }}
       >
-        <div
-          className="h-10 w-10 rounded-full"
-          style={{ background: "linear-gradient(155deg, #ffc94d, #c97f12)" }}
-        />
-        <p className="text-[8px] uppercase tracking-widest" style={{ color: "#8b97b3" }}>
+        <div className="relative h-12 w-12 overflow-hidden rounded-xl" style={{ border: "1px solid #26304a" }}>
+          <Image
+            src="/images/blocky-market-hero.jpg"
+            alt=""
+            fill
+            sizes="48px"
+            className="object-cover"
+            style={{ objectPosition: "50% 32%" }}
+          />
+        </div>
+        <p className="mt-1 text-[8px] uppercase tracking-widest" style={{ color: "#8b97b3" }}>
           Season 0 Balance
         </p>
         <p className="text-lg font-bold" style={{ color: "#ffd24a", fontFamily: "var(--font-mono)" }}>
@@ -257,7 +260,7 @@ function AccountBody() {
 
 export function MarketPreview() {
   return (
-    <div className="flex flex-wrap items-stretch justify-center gap-5">
+    <div className="mx-auto grid max-w-[660px] grid-cols-1 gap-5 sm:grid-cols-2">
       <Frame activeTab="Market">
         <MarketBody />
       </Frame>
