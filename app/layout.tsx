@@ -24,11 +24,11 @@ const siteUrl = "https://www.blockyaiagent.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Blocky — A Web3 Brand Built on Swagger",
+  title: "Blocky — A Growing Web3 Ecosystem",
   description:
     "Blocky is a Web3-native brand growing beyond $BLOCKY into community experiences, products, and a larger ecosystem. Explore the brand, the token, and what's next.",
   openGraph: {
-    title: "Blocky — A Web3 Brand Built on Swagger",
+    title: "Blocky — A Growing Web3 Ecosystem",
     description:
       "Blocky is a Web3-native brand growing beyond $BLOCKY into community experiences, products, and a larger ecosystem.",
     url: siteUrl,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blocky — A Web3 Brand Built on Swagger",
+    title: "Blocky — A Growing Web3 Ecosystem",
     description:
       "Blocky is a Web3-native brand growing beyond $BLOCKY into community experiences, products, and a larger ecosystem.",
   },

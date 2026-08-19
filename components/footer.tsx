@@ -24,8 +24,8 @@ export function Footer() {
           <div>
             <p className="font-display text-xl font-bold text-text">BLOCKY</p>
             <p className="mt-3 max-w-xs text-sm text-text-muted">
-              A Web3-native brand built on swagger — growing beyond the token
-              into a community, products, and a bigger ecosystem.
+              A Web3-native brand growing beyond the token — into a
+              community, products, and a bigger ecosystem.
             </p>
           </div>
 

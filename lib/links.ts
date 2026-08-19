@@ -17,9 +17,22 @@ export const TOKEN = {
 export const NFT = {
   chain: "Ethereum",
   contract: "0x37d129c771c621277ad6ed53b12599156ec69ce1",
-  // Verified per-item URLs use this pattern; the contract-level assets page
-  // avoids guessing a collection slug that was never observed on the live site.
-  opensea: "https://opensea.io/assets/ethereum/0x37d129c771c621277ad6ed53b12599156ec69ce1",
+  opensea: "https://opensea.io/collection/blocky-ai-agents",
+  // Real thumbnails from the live collection, verified against the OpenSea CDN.
+  previewImages: [
+    {
+      src: "https://i2c.seadn.io/ethereum/0x37d129c771c621277ad6ed53b12599156ec69ce1/63a688f1ffcdd2a903f9681e125426/e463a688f1ffcdd2a903f9681e125426.png?w=350",
+      alt: "BLOCKY #765",
+    },
+    {
+      src: "https://i2c.seadn.io/ethereum/0x37d129c771c621277ad6ed53b12599156ec69ce1/1a74644378d9dfcf913866d1924be4/4e1a74644378d9dfcf913866d1924be4.png?w=350",
+      alt: "BLOCKY #8700",
+    },
+    {
+      src: "https://i2c.seadn.io/ethereum/0x37d129c771c621277ad6ed53b12599156ec69ce1/d739b720c67c017f3eaccd6c6b3506/b7d739b720c67c017f3eaccd6c6b3506.png?w=350",
+      alt: "BLOCKY #461",
+    },
+  ],
 };
 
 export const SOCIAL = {

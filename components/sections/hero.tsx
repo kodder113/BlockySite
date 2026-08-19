@@ -18,7 +18,7 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.05}>
             <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-text sm:text-5xl md:text-6xl">
-              Built with swagger.
+              Built on conviction.
               <br />
               <span className="bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent">
                 Built to last.
@@ -27,10 +27,9 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-xl text-lg text-text-muted sm:text-xl">
-              Blocky started as a Web3 identity with unmistakable attitude.
-              Now it&apos;s growing into a full ecosystem — a token, a
-              community, and a lineup of products for people who don&apos;t
-              follow trends. They start them.
+              Blocky began as a Web3 token with a distinct identity. It&apos;s
+              now growing into a broader ecosystem — a token, an active
+              community, and a growing lineup of products built around it.
             </p>
           </Reveal>
           <Reveal delay={0.15}>

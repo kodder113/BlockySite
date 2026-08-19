@@ -5,8 +5,6 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/motion/reveal";
-import { BLOCKY_MARKET_URL } from "@/lib/links";
-import { ArrowUpRight } from "lucide-react";
 
 type Status = "live" | "beta" | "planned" | "future" | "exploring";
 
@@ -16,7 +14,6 @@ const PHASES: {
   status: Status;
   label: string;
   items: string[];
-  link?: { href: string; label: string };
 }[] = [
   {
     n: "01",
@@ -40,7 +37,6 @@ const PHASES: {
       "Head-to-head challenges",
       "Blocky Points and basic competition mechanics",
     ],
-    link: { href: BLOCKY_MARKET_URL, label: "Try the MVP" },
   },
   {
     n: "03",
@@ -139,16 +135,6 @@ export function Roadmap() {
                       </li>
                     ))}
                   </ul>
-                  {phase.link && (
-                    <a
-                      href={phase.link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline"
-                    >
-                      {phase.link.label} <ArrowUpRight size={14} />
-                    </a>
-                  )}
                 </li>
               </Reveal>
             ))}
