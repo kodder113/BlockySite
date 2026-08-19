@@ -13,7 +13,7 @@ export function Nft() {
             <SectionHeading
               eyebrow="NFT Collection"
               title="A collectible set, separate from the token."
-              description={`Blocky also has a standalone NFT collection on ${NFT.chain}. It's a separate asset from $BLOCKY — its own collectible line with its own listing.`}
+              description={`Blocky also maintains a standalone NFT collection on ${NFT.chain} — a distinct collectible line with its own listing, unrelated to $BLOCKY's token economics.`}
             />
             <a
               href={NFT.opensea}

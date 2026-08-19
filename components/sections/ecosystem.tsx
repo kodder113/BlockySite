@@ -8,22 +8,22 @@ const PILLARS = [
   {
     icon: Coins,
     title: "$BLOCKY",
-    body: "The token and the foundation of the original Blocky community, live on Solana.",
+    body: "The token that started it all, and still the foundation the rest of the ecosystem is built on. Live on Solana.",
   },
   {
     icon: Users,
     title: "Community",
-    body: "The people building, posting, and showing up — the reason the brand has any weight at all.",
+    body: "The people who talk about Blocky, build around it, and keep it moving — the actual source of the brand's momentum.",
   },
   {
     icon: Sparkles,
     title: "Experiences",
-    body: "New ways for the community to interact with Blocky beyond just holding the token.",
+    body: "New ways to engage with Blocky that go beyond simply holding the token.",
   },
   {
     icon: Boxes,
     title: "Products",
-    body: "New Blocky-built projects, shipped over time as the ecosystem expands.",
+    body: "Independent projects built under the Blocky name, shipped over time as the ecosystem matures.",
   },
 ];
 
@@ -35,7 +35,7 @@ export function Ecosystem() {
           <SectionHeading
             eyebrow="The Ecosystem"
             title="One brand, growing in every direction."
-            description="Blocky isn't standing still as a static token page. Here's what the ecosystem is made of today, and how it's expanding."
+            description="Blocky isn't a static token page. It's a set of pieces working together — here's what makes up the ecosystem today, and where it's headed."
           />
         </Reveal>
 
@@ -63,10 +63,10 @@ export function Ecosystem() {
                 BlockyMarket
               </p>
               <p className="mx-auto mt-1.5 max-w-xl text-sm text-text-muted">
-                One of the first products being developed within the
-                expanding Blocky ecosystem — a competitive prediction
-                experience where you test your instincts against the market.
-                Not yet open to the public — preview only.
+                One of the first products developed within the expanding
+                Blocky ecosystem — a competitive prediction experience that
+                tests your read on the market. Not yet open to the public;
+                preview only.
               </p>
             </div>
             <div className="mt-8">

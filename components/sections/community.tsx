@@ -68,7 +68,7 @@ export function Community() {
           <SectionHeading
             eyebrow="Join Us"
             title="Blocky gets better when more people show up."
-            description="Telegram, X, Instagram, TikTok — this isn't just a project, it's a running conversation. Come help shape what Blocky builds next."
+            description="Telegram, X, Instagram, TikTok — this is where the Blocky community actually lives. Less a broadcast channel, more an ongoing conversation."
           />
         </Reveal>
 

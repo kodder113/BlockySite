@@ -24,6 +24,7 @@ const PHASES: {
       "$BLOCKY token launch & contract audit",
       "CoinGecko, DexScreener & CoinMarketCap listings",
       "Brand and visual identity launch",
+      "New marketing website",
       "Telegram and X community formed",
     ],
   },
@@ -82,6 +83,17 @@ const PHASES: {
       "Financial model not yet decided — no cash-out, no wagering",
     ],
   },
+  {
+    n: "07",
+    title: "Blocky AI",
+    status: "exploring",
+    label: "Exploring",
+    items: [
+      "An interactive AI presence for the Blocky community",
+      "A guiding voice inside BlockyMarket, explaining markets and mechanics as they happen",
+      "Scope and capabilities still being defined",
+    ],
+  },
 ];
 
 export function Roadmap() {
@@ -100,7 +112,7 @@ export function Roadmap() {
             align="center"
             eyebrow="Our Journey"
             title="Blocky's evolution, phase by phase."
-            description="From a token with attitude to a full ecosystem. Some of this is already live — the rest is the vision we're building toward."
+            description="From a single token to a growing ecosystem. Some of this is already live; the rest is the direction we're building toward."
             className="mx-auto"
           />
         </Reveal>

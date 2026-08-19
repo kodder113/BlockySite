@@ -29,9 +29,10 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-xl text-lg text-text-muted sm:text-xl">
-              Blocky began as a Web3 token with a distinct identity. It&apos;s
-              now growing into a broader ecosystem — a token, an active
-              community, and a growing lineup of products built around it.
+              Blocky began as a Web3 token with a distinct identity of its
+              own. It has since grown into a wider ecosystem — spanning the
+              token, an engaged community, and an expanding set of products
+              built around them.
             </p>
           </Reveal>
           <Reveal delay={0.15}>

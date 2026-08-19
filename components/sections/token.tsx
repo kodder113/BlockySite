@@ -40,7 +40,7 @@ export function Token() {
           <SectionHeading
             eyebrow="$BLOCKY"
             title="The token that started it all."
-            description="$BLOCKY runs on Solana. It's the foundation the Blocky community was built on — not a promise of returns. Do your own research before buying anything."
+            description="$BLOCKY runs on Solana. It's the foundation the rest of the Blocky ecosystem is built on — not a promise of returns. Do your own research before buying anything."
           />
         </Reveal>
 

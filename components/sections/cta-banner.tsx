@@ -10,11 +10,12 @@ export function CtaBanner() {
       <div className="relative mx-auto max-w-4xl px-5 py-24 text-center sm:px-8 sm:py-32">
         <Reveal>
           <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl md:text-5xl">
-            Be part of what Blocky builds next.
+            Still early. Still building.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-text-muted">
             Blocky is a brand in motion — a token, a community, and an
-            ecosystem still being built. Come be part of it early.
+            ecosystem taking shape in real time. Get involved while it&apos;s
+            early.
           </p>
         </Reveal>
         <Reveal delay={0.08}>

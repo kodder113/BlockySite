@@ -3,20 +3,20 @@ import { Reveal } from "@/components/motion/reveal";
 
 const TRAITS = [
   {
-    title: "Community-owned",
-    body: "The brand grows because people show up for it — on Telegram, on X, in the group chats.",
+    title: "Community-driven",
+    body: "Momentum here comes from people showing up and taking part — on Telegram, on X, in the day-to-day conversation — not from a marketing budget.",
   },
   {
     title: "Built in public",
-    body: "Blocky grew out of internet culture, shaped early by the people who found it first.",
+    body: "Blocky took shape in the open, shaped early by the people who found it first and stuck around.",
   },
   {
     title: "Web3-native",
-    body: "Born on-chain, built for people who already live in wallets and DEX charts, not decks.",
+    body: "Born on-chain and built for people already comfortable in wallets and DEX charts — not slide decks.",
   },
   {
     title: "Still building",
-    body: "$BLOCKY was the first product. It won't be the last — more is already in motion.",
+    body: "$BLOCKY was the first move, not the last one. Additional products are already in motion.",
   },
 ];
 
@@ -27,8 +27,8 @@ export function WhatIsBlocky() {
         <Reveal>
           <SectionHeading
             eyebrow="What is Blocky?"
-            title="A brand built by its community, not a boardroom."
-            description="Blocky is a Web3-native brand — built around a token, sustained by an active community, and expanding into new products and experiences over time. It's not a pitch deck; it's something people actually show up for."
+            title="A brand shaped by its community, not a boardroom."
+            description="Blocky is a Web3-native brand: a token, sustained by a genuinely active community, and expanding over time into new products and experiences. There's no pitch deck behind it — just people who kept showing up."
           />
         </Reveal>
 
