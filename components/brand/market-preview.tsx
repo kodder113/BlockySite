@@ -1,272 +1,86 @@
-// Static, non-interactive mockups of the BlockyMarket UI -- not live
-// screenshots, not links. Built from BlockyMarket's own brand tokens
-// (src/lib/tokens.js), its real coin list/glyphs, its real copy strings,
-// its real 5-tab bottom nav, and its real official Blocky artwork
-// (extracted from the HERO_IMG data URI in src/App.jsx) -- all verified
-// against that source. Per App.jsx, nothing is laid over the hero band,
-// so the wordmark sits below it. Balance/leaderboard values are
-// placeholders, not real user data. Nothing here is clickable.
+// Real screenshots of the BlockyMarket application, cropped from a
+// composite supplied by the project owner. Account/challenge data in
+// these shots is placeholder (Joe, Sarah, Mike, joe.doe@email.com) --
+// no real user data is published here.
+//
+// These replaced the earlier hand-built CSS mockups: the section claims
+// BlockyMarket is a working beta, so it should show the actual product.
 
 import Image from "next/image";
-import type { ReactNode } from "react";
 
-const COINS = [
-  { sym: "BTC", mark: "₿", active: true },
-  { sym: "ETH", mark: "Ξ" },
-  { sym: "SOL", mark: "◎" },
-  { sym: "BNB", mark: "⬡" },
-  { sym: "XRP", mark: "✕" },
-  { sym: "DOGE", mark: "Ð" },
-  { sym: "ADA", mark: "₳" },
-  { sym: "AVAX", mark: "▲" },
-  { sym: "LINK", mark: "⬢" },
-  { sym: "TRX", mark: "◇" },
+export type Shot = {
+  src: string;
+  alt: string;
+  caption: string;
+  width: number;
+  height: number;
+};
+
+export const SHOTS: Shot[] = [
+  {
+    src: "/images/market/market.png",
+    alt: "BlockyMarket's market screen: ten crypto markets, live Bitcoin price, prediction horizons with payout multipliers, a points stake field, and a confirmation panel showing protocol fee, implied odds and potential return.",
+    caption: "Pick a market, set your horizon, stake Blocky Points.",
+    width: 542,
+    height: 549,
+  },
+  {
+    src: "/images/market/live.png",
+    alt: "BlockyMarket's live screen tracking an open BTC Higher prediction with entry price, current price, move percentage, checkpoint progress and a countdown.",
+    caption: "Track open predictions through each checkpoint.",
+    width: 483,
+    height: 549,
+  },
+  {
+    src: "/images/market/challenges.png",
+    alt: "BlockyMarket's challenges screen showing a community prediction pool with pooled points, player options, and resolved results.",
+    caption: "Community pools, resolved against real outcomes.",
+    width: 509,
+    height: 549,
+  },
+  {
+    src: "/images/market/history.png",
+    alt: "BlockyMarket's history screen showing settled predictions with win rate, net points, and a list of past BTC predictions with entry and exit prices.",
+    caption: "A settled record: win rate, net points, every call.",
+    width: 542,
+    height: 427,
+  },
+  {
+    src: "/images/market/account-stats.png",
+    alt: "BlockyMarket's account screen showing a Season 0 points balance, weekly rank and stats including wins, win rate, net points and best streak, plus an all-time most-wins leaderboard.",
+    caption: "Rank, streaks, and all-time standings.",
+    width: 483,
+    height: 427,
+  },
+  {
+    src: "/images/market/account-payouts.png",
+    alt: "BlockyMarket's account settings showing a configurable session loss limit and an explanation of how payout multipliers are set for each horizon.",
+    caption: "Session limits and how payouts are set.",
+    width: 509,
+    height: 427,
+  },
 ];
 
-const HORIZONS = [
-  { label: "15m", mult: "1.93×", active: true },
-  { label: "30m", mult: "2.58×" },
-  { label: "45m", mult: "3.09×" },
-  { label: "60m", mult: "3.54×" },
-];
-
-const NAV = [
-  { label: "Market", mark: "◈" },
-  { label: "Live", mark: "◉" },
-  { label: "Predict", mark: "★" },
-  { label: "History", mark: "▤" },
-  { label: "Account", mark: "◐" },
-];
-
-function Frame({
-  activeTab,
-  children,
-}: {
-  activeTab: (typeof NAV)[number]["label"];
-  children: ReactNode;
-}) {
+export function MarketPreview({ shots = SHOTS }: { shots?: Shot[] }) {
   return (
-    <div
-      className="pointer-events-none flex h-full w-full select-none flex-col overflow-hidden rounded-2xl border shadow-[0_30px_70px_-25px_rgba(0,0,0,0.7)]"
-      style={{ background: "#0a0e1a", borderColor: "#26304a", fontFamily: "var(--font-sans)" }}
-      aria-hidden="true"
-    >
-      {/* app header */}
-      <div className="flex items-center justify-between px-4 pt-4">
-        <div className="flex items-center gap-2">
-          <div
-            className="flex h-7 w-7 items-center justify-center rounded-md text-sm font-bold"
-            style={{ background: "#ff7a18", color: "#0a0e1a" }}
-          >
-            ₿
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {shots.map((shot) => (
+        <figure key={shot.src} className="flex flex-col">
+          <div className="glow-border overflow-hidden rounded-lg border bg-[#0a0e1a] shadow-[0_24px_60px_-30px_rgba(0,0,0,0.9)]">
+            <Image
+              src={shot.src}
+              alt={shot.alt}
+              width={shot.width}
+              height={shot.height}
+              sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+              className="h-auto w-full"
+            />
           </div>
-          <div>
-            <p
-              className="text-xs font-bold tracking-wide"
-              style={{ fontFamily: "var(--font-display)", color: "#e8edf7" }}
-            >
-              BLOCKYMARKET
-            </p>
-            <p className="text-[8px] uppercase tracking-widest" style={{ color: "#8b97b3" }}>
-              Direction Market
-            </p>
-          </div>
-        </div>
-        <div className="text-right">
-          <p className="text-[8px] uppercase tracking-widest" style={{ color: "#8b97b3" }}>
-            Points
-          </p>
-          <p className="text-xs font-bold" style={{ color: "#ffd24a", fontFamily: "var(--font-mono)" }}>
-            12,480
-          </p>
-        </div>
-      </div>
-
-      <p
-        className="mx-4 mt-3 rounded-md px-2.5 py-1.5 text-center text-[8px] font-medium"
-        style={{ background: "#121829", color: "#ffb347" }}
-      >
-        Live prices · Season 0 points · no cash value
-      </p>
-
-      {/* hero band -- the real official Blocky artwork, nothing laid over it */}
-      <div className="relative mt-3 aspect-[3/2] w-full" style={{ background: "#07090f" }}>
-        <Image
-          src="/images/blocky-market-hero.jpg"
-          alt=""
-          fill
-          sizes="320px"
-          className="object-cover"
-          style={{ objectPosition: "50% 30%" }}
-        />
-      </div>
-
-      <div className="px-4 pb-1 pt-3 text-center">
-        <p
-          className="text-sm font-bold tracking-[0.2em]"
-          style={{ fontFamily: "var(--font-display)", color: "#ffd24a" }}
-        >
-          BLOCKY
-        </p>
-        <p className="mt-0.5 text-xs" style={{ color: "#e8edf7" }}>
-          Pick a block. Ride it.
-        </p>
-      </div>
-
-      <div className="flex-1">{children}</div>
-
-      {/* bottom nav */}
-      <div className="mt-4 grid grid-cols-5" style={{ borderTop: "1px solid #1a2236" }}>
-        {NAV.map((n) => (
-          <div
-            key={n.label}
-            className="flex flex-col items-center gap-1 py-2.5 text-[7px] font-medium"
-            style={{ color: n.label === activeTab ? "#ff7a18" : "#8b97b3" }}
-          >
-            <span className="text-[11px]">{n.mark}</span>
-            {n.label}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function MarketBody() {
-  return (
-    <div className="px-4 pt-3">
-      <p className="text-[9px] font-semibold uppercase tracking-widest" style={{ color: "#8b97b3" }}>
-        Market
-      </p>
-
-      <div className="mt-2 grid grid-cols-5 gap-1.5">
-        {COINS.map((c) => (
-          <div
-            key={c.sym}
-            className="flex flex-col items-center justify-center rounded-lg py-2 text-[8px] font-semibold"
-            style={{
-              background: c.active ? "#ff7a18" : "#121829",
-              color: c.active ? "#0a0e1a" : "#e8edf7",
-              border: c.active ? "none" : "1px solid #26304a",
-            }}
-          >
-            <span className="text-[10px]">{c.mark}</span>
-            {c.sym}
-          </div>
-        ))}
-      </div>
-
-      <div
-        className="mt-3 flex items-center justify-between rounded-lg px-3 py-2.5"
-        style={{ background: "#121829", border: "1px solid #26304a" }}
-      >
-        <div>
-          <p className="text-[9px]" style={{ color: "#8b97b3" }}>
-            Bitcoin
-          </p>
-          <p className="text-sm font-bold" style={{ color: "#e8edf7", fontFamily: "var(--font-mono)" }}>
-            $64,737
-          </p>
-        </div>
-        <svg width="60" height="20" viewBox="0 0 60 20" fill="none">
-          <polyline
-            points="0,16 10,14 20,15 30,9 40,10 50,4 60,6"
-            stroke="#27d796"
-            strokeWidth="1.5"
-            fill="none"
-          />
-        </svg>
-      </div>
-
-      <p className="mt-3 text-[8px] font-semibold uppercase tracking-widest" style={{ color: "#8b97b3" }}>
-        Horizon · checkpoints every 15m
-      </p>
-      <div className="mt-1.5 grid grid-cols-4 gap-1.5">
-        {HORIZONS.map((h) => (
-          <div
-            key={h.label}
-            className="flex flex-col items-center gap-0.5 rounded-lg py-1.5"
-            style={{
-              background: h.active ? "transparent" : "#121829",
-              border: h.active ? "1px solid #ffb347" : "1px solid #26304a",
-            }}
-          >
-            <span className="text-[9px] font-semibold" style={{ color: h.active ? "#ffb347" : "#e8edf7" }}>
-              {h.label}
-            </span>
-            <span className="text-[7px]" style={{ color: "#8b97b3" }}>
-              {h.mult}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function AccountBody() {
-  return (
-    <div className="px-4 pt-3">
-      <div
-        className="flex flex-col items-center gap-1.5 rounded-lg px-3 py-4 text-center"
-        style={{ background: "#121829", border: "1px solid #26304a" }}
-      >
-        <div className="relative h-12 w-12 overflow-hidden rounded-xl" style={{ border: "1px solid #26304a" }}>
-          <Image
-            src="/images/blocky-market-hero.jpg"
-            alt=""
-            fill
-            sizes="48px"
-            className="object-cover"
-            style={{ objectPosition: "50% 32%" }}
-          />
-        </div>
-        <p className="mt-1 text-[8px] uppercase tracking-widest" style={{ color: "#8b97b3" }}>
-          Season 0 Balance
-        </p>
-        <p className="text-lg font-bold" style={{ color: "#ffd24a", fontFamily: "var(--font-mono)" }}>
-          12,480
-        </p>
-        <div
-          className="mt-1 rounded-md px-4 py-1.5 text-[9px] font-semibold"
-          style={{ border: "1px solid #26304a", color: "#e8edf7" }}
-        >
-          Sign out
-        </div>
-      </div>
-
-      <p className="mt-3 text-[8px] font-semibold uppercase tracking-widest" style={{ color: "#8b97b3" }}>
-        Most wins
-      </p>
-      <div className="mt-1.5 space-y-1.5">
-        {[1, 2, 3].map((i) => (
-          <div
-            key={i}
-            className="flex items-center justify-between rounded-lg px-3 py-2"
-            style={{ background: "#121829", border: "1px solid #26304a" }}
-          >
-            <span className="text-[9px]" style={{ color: "#e8edf7" }}>
-              Player {i}
-            </span>
-            <span className="text-[9px] font-semibold" style={{ color: "#27d796", fontFamily: "var(--font-mono)" }}>
-              +{(4 - i) * 1200}
-            </span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export function MarketPreview() {
-  return (
-    <div className="mx-auto grid max-w-[660px] grid-cols-1 gap-5 sm:grid-cols-2">
-      <Frame activeTab="Market">
-        <MarketBody />
-      </Frame>
-      <Frame activeTab="Account">
-        <AccountBody />
-      </Frame>
+          <figcaption className="mt-3 text-center text-xs text-text-faint">
+            {shot.caption}
+          </figcaption>
+        </figure>
+      ))}
     </div>
   );
 }
