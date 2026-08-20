@@ -8,12 +8,15 @@ import { ButtonLink } from "@/components/ui/button";
 import { SOCIAL } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
+// Absolute ("/#...") rather than bare hashes so these resolve correctly
+// from subpages like /nfts, not just the homepage.
 const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#ecosystem", label: "Ecosystem" },
-  { href: "#roadmap", label: "Roadmap" },
-  { href: "#token", label: "$BLOCKY" },
-  { href: "#community", label: "Community" },
+  { href: "/#about", label: "About" },
+  { href: "/#ecosystem", label: "Ecosystem" },
+  { href: "/#roadmap", label: "Roadmap" },
+  { href: "/nfts", label: "NFTs" },
+  { href: "/#token", label: "$BLOCKY" },
+  { href: "/#community", label: "Community" },
 ];
 
 export function Nav() {
@@ -23,7 +26,7 @@ export function Nav() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link
-          href="#top"
+          href="/"
           className="flex items-center gap-2.5"
           onClick={() => setOpen(false)}
         >
@@ -42,7 +45,7 @@ export function Nav() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -56,7 +59,7 @@ export function Nav() {
 
         <div className="hidden items-center gap-3 md:flex">
           <ButtonLink
-            href="#ecosystem"
+            href="/#ecosystem"
             variant="outline"
             className="px-4 py-2 text-sm"
           >
@@ -96,7 +99,7 @@ export function Nav() {
             </Link>
           ))}
           <div className="mt-2 flex flex-col gap-3">
-            <ButtonLink href="#ecosystem" variant="outline" onClick={() => setOpen(false)}>
+            <ButtonLink href="/#ecosystem" variant="outline" onClick={() => setOpen(false)}>
               BlockyMarket ↗
             </ButtonLink>
             <ButtonLink href={SOCIAL.telegram.url} external>

@@ -2,11 +2,12 @@ import Link from "next/link";
 import { SOCIAL, TOKEN } from "@/lib/links";
 
 const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#ecosystem", label: "Ecosystem" },
-  { href: "#roadmap", label: "Roadmap" },
-  { href: "#token", label: "$BLOCKY" },
-  { href: "#community", label: "Community" },
+  { href: "/#about", label: "About" },
+  { href: "/#ecosystem", label: "Ecosystem" },
+  { href: "/#roadmap", label: "Roadmap" },
+  { href: "/nfts", label: "NFTs" },
+  { href: "/#token", label: "$BLOCKY" },
+  { href: "/#community", label: "Community" },
 ];
 
 const SOCIAL_LINKS = [
