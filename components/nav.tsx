@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { ButtonLink } from "@/components/ui/button";
-import { SOCIAL } from "@/lib/links";
+import { SOCIAL, BLOCKY_MARKET_URL } from "@/lib/links";
 import { cn } from "@/lib/utils";
 
 // Absolute ("/#...") rather than bare hashes so these resolve correctly
@@ -59,8 +59,9 @@ export function Nav() {
 
         <div className="hidden items-center gap-3 md:flex">
           <ButtonLink
-            href="/#ecosystem"
+            href={BLOCKY_MARKET_URL}
             variant="outline"
+            external
             className="px-4 py-2 text-sm"
           >
             BlockyMarket ↗
@@ -99,7 +100,12 @@ export function Nav() {
             </Link>
           ))}
           <div className="mt-2 flex flex-col gap-3">
-            <ButtonLink href="/#ecosystem" variant="outline" onClick={() => setOpen(false)}>
+            <ButtonLink
+              href={BLOCKY_MARKET_URL}
+              variant="outline"
+              external
+              onClick={() => setOpen(false)}
+            >
               BlockyMarket ↗
             </ButtonLink>
             <ButtonLink href={SOCIAL.telegram.url} external>

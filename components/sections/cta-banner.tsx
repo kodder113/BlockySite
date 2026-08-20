@@ -1,6 +1,6 @@
 import { ButtonLink } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
-import { SOCIAL } from "@/lib/links";
+import { SOCIAL, BLOCKY_MARKET_URL } from "@/lib/links";
 
 export function CtaBanner() {
   return (
@@ -13,9 +13,9 @@ export function CtaBanner() {
             Still early. Still building.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-text-muted">
-            Blocky started with a token. What we&apos;re building now is much
-            bigger — products, competition, community, and a brand that can
-            keep evolving.
+            Blocky started with a token. Now the brand is moving beyond it —
+            into products, competition, community, and new ways to
+            participate. BlockyMarket is the first step.
           </p>
           <p className="mx-auto mt-3 max-w-xl text-lg text-text-muted">
             See where it goes. Better yet, be part of it.
@@ -26,8 +26,8 @@ export function CtaBanner() {
             <ButtonLink href={SOCIAL.telegram.url} external>
               Join the Community
             </ButtonLink>
-            <ButtonLink href="#ecosystem" variant="outline">
-              Explore BlockyMarket
+            <ButtonLink href={BLOCKY_MARKET_URL} variant="outline" external>
+              Explore BlockyMarket ↗
             </ButtonLink>
           </div>
         </Reveal>

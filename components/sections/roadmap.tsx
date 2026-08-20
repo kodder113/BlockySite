@@ -34,10 +34,13 @@ const PHASES: {
     status: "beta",
     label: "Beta",
     items: [
-      "Market and outcome predictions",
-      "Blocky Points",
-      "Head-to-head competition",
-      "Core prediction experience",
+      "Live crypto price predictions",
+      "Higher / Lower directional markets",
+      "Multiple horizons and checkpoint mechanics",
+      "Blocky Points staking and payouts",
+      "Live prediction tracking",
+      "Community prediction pools",
+      "Player history and performance tracking",
     ],
   },
   {
@@ -118,12 +121,12 @@ export function Roadmap() {
             align="center"
             eyebrow="Our Journey"
             title="Blocky's evolution, phase by phase."
-            description="The token was the starting point, not the finish line. We're building outward from it — first through BlockyMarket, then through competition, social experiences, and whatever proves worth building next."
+            description="Phase 1 established the token, the brand, and the community. Phase 2 is where Blocky became a brand that ships products — BlockyMarket is live in beta today. What follows builds outward from there."
             className="mx-auto"
           />
           <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-text-faint">
-            Some of this is live. Some is planned. Some we&apos;re still
-            exploring. That&apos;s intentional.
+            Some of this is built. Some is being built. Some we&apos;re still
+            exploring. The status on each phase says which.
           </p>
         </Reveal>
 

@@ -16,7 +16,7 @@ const TRAITS = [
   },
   {
     title: "Just getting started",
-    body: "$BLOCKY started the story. BlockyMarket is the first major step beyond it — and we're not stopping there.",
+    body: "$BLOCKY started the story. BlockyMarket is the first product built beyond it — and the beginning of where the Blocky brand can go next.",
   },
 ];
 

@@ -1,8 +1,10 @@
-import { Coins, Users, Sparkles, Boxes } from "lucide-react";
+import { Coins, Users, Sparkles, Boxes, ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Badge } from "@/components/ui/badge";
+import { ButtonLink } from "@/components/ui/button";
 import { Reveal } from "@/components/motion/reveal";
 import { MarketPreview } from "@/components/brand/market-preview";
+import { BLOCKY_MARKET_URL } from "@/lib/links";
 
 const PILLARS = [
   {
@@ -18,12 +20,12 @@ const PILLARS = [
   {
     icon: Sparkles,
     title: "Experiences",
-    body: "Ways to interact with Blocky rather than simply watch it — predictions, challenges, rankings, competition, and more.",
+    body: "Predictions, challenges, competition, and new ways to participate in Blocky beyond simply holding the token.",
   },
   {
     icon: Boxes,
     title: "Products",
-    body: "Things we build under the Blocky name. BlockyMarket is the first major example, with more possibilities ahead.",
+    body: "Blocky is growing through things people can actually use. BlockyMarket is the first — a working prediction and competition experience, with more possibilities ahead.",
   },
 ];
 
@@ -58,20 +60,25 @@ export function Ecosystem() {
         <Reveal delay={0.15}>
           <div className="glow-border mt-6 rounded-md border bg-gradient-to-br from-surface to-bg-alt p-7">
             <div className="mx-auto max-w-2xl text-center">
-              <Badge status="beta">Blocky&apos;s First Product</Badge>
+              <Badge status="beta">First Product · Beta</Badge>
               <p className="mt-3 font-display text-xl font-semibold text-text">
                 BlockyMarket
               </p>
               <p className="mx-auto mt-1.5 max-w-xl text-sm text-text-muted">
-                Prediction meets competition. BlockyMarket is a new way to
-                test your read on what happens next — starting with markets
-                and expanding over time into more events, challenges, and
-                outcomes. Make your call, compete, earn points, and see how
-                you rank.
+                BlockyMarket is where predictions become competition. Put
+                Blocky Points behind your call, follow outcomes live, compete
+                across different prediction formats, and build your record
+                over time.
               </p>
               <p className="mx-auto mt-3 max-w-xl text-xs text-text-faint">
-                The first major product built under the Blocky brand.
+                Starting with crypto markets and community predictions, with
+                more markets, challenges, and ways to compete ahead.
               </p>
+              <div className="mt-6 flex justify-center">
+                <ButtonLink href={BLOCKY_MARKET_URL} external>
+                  Explore BlockyMarket <ArrowUpRight size={16} />
+                </ButtonLink>
+              </div>
             </div>
             <div className="mt-8">
               <MarketPreview />
